@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-elements">
+            <ul>
+                <li class="nav-element"><a href="#">Home</a></li>
+                <li class="nav-element"><a href="#">Projects</a></li>
+                <li class="nav-element"><a href="#">About</a></li>
+                <li class="nav-element"><a href="#">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-side">
+            <h2>Hi there!</h2>
+            <h1>I am <span>Vikas Sharma.</span></h1>
+            <p>Welcome to my portfolio website. I am a full time MERN stack developer. Here, I upload all my content related to my work, projects and many more.</p>
+            <button class="download-cv"><a href="Resume-Vikas-Sharma.pdf" download>Download CV</a></button>
+        </div>
+        <div class="right-side">
+            <img src="image.png" alt="my_image">
+        </div>
+    </div>
+    <div class="projects">
+        <h1>PROJECTS</h1>
+        <div class="w3-content w3-display-container">
+            <a href="https://vicusharma.github.io/Calculator/" target="_blank"><img class="mySlides" src="project2.jpg" style="width:100%"></a>
+            <a href="https://vicusharma.github.io/MY-University" target="_blank"><img class="mySlides" src="project1.jpg" style="width:100%"></a>
+            <a href="https://vicusharma.github.io/Snake-Game/" target="_blank"><img class="mySlides" src="project3.jpg" style="width:100%"></a>
+            <a href="https://vicusharma.github.io/Resume/" target="_blank"><img class="mySlides" src="project4.jpg" style="width:100%"></a>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+    </div>
+    <div class="about">
+        <h1>ABOUT</h1>
+        <div class="about-me">
+            <img src="https://camo.githubusercontent.com/cae12fddd9d6982901d82580bdf321d81fb299141098ca1c2d4891870827bf17/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313336302f302a37513379765349765f7430696f4a2d5a2e676966" alt="">
+        <p>
+            I am Vikas Sharma, a full time full stack developer with knowledge of HTML, CSS, Javacript and Recat JS. I compeletd my graduation in Swami Vivekanand College of Engineering, Indore (M.P.) as a mechanical engineer. I knew that, Mechanical Engineering is more usesful with the knowledge of softwares and artificial intelligence technogy. So I decided to do full stack web devlopment. then i joined the Newton School and learning many things and grabbing it into my skill development.
+        </p>
+        </div>
+    </div>
+    <div class="contact">
+        <h1>Contact Me</h1>
+    </div>
+    <div class="contact-side">
+        <img class="contact-img" src="https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?w=2000">
+        <form action="thankyou.html" class="contact-form">
+            <label for="#fname">First Name</label><br>
+            <input class="input" type="fname" name="" id="fname" required><br>
+
+            <label for="#lname">Last Name</label><br>
+            <input class="input" type="text" name="lname" id="lname"><br>
+
+            <label for="#email">Email Id</label><br>
+            <input class="input" type="email" name="email" id="email" required><br>
+
+            <label for="#phone">Phone Number</label><br>
+            <input class="input" type="number" name="number" id="phone" required><br>
+
+            <label for="#message">Message</label><br>
+            <textarea class="input" name="message" id="message" minlength="10"></textarea><br>
+
+            <button class="submit" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="footer">
+        <h1>Follow on:</h1>
+        <div class="social">
+            <a href="https://github.com/vicusharma" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vicusharma12/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/vicusharma" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCYOuVKMsxJlm5I3AQ7pEd8w" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/vicusharma" target="_blank"><i class="fa-solid fa-earth-africa"></i></a>
+        </div>
+        <h4>© 2022 Portfolio. All rights reserved by Vikas Sharma.</h4>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
+</body>
+</html>
